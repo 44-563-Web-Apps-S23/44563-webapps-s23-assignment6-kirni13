@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>painter.html page</title>
+</head>
+<body>
+<h1>Painter entry Soujanya Kirni</h1>
+
+<form>
+    <label for="form1_hidden">The hidden painter name </label>
+    <input type ="password" id="form1_hidden" name="form1_hidden" min=10 max=50 step=2 value=Monet> <br>
+
+    <label for="form1_painter">Guess the painter </label>
+    <input type ="text" id="form1_painter" name="form1_painter" autofocus> <br>
+
+    <input type="button" onclick="checkPainter()" value="Check the guess">
+</form>
+
+
+<p id="result">This text will be replaced </p>
+
+<script> 
+ var good=0;
+ var oops=0;
+function checkPainter (){
+   
+    console.log("Getting form values")
+    age = document.getElementById("form1_hidden").value
+    nick = document.getElementById("form1_painter").value
+    
+    
+    out = document.getElementById("result")
+    if(secret==guess){
+        good= good+1
+        alert('You got it right')
+        out.innerHTML = "good trace "+good + " Wrong trace "+ wrong
+        c = 0
+    } else {
+        wrong=wrong+1
+        alert('Sorry')
+        out.innerHTML = "good trace "+good + " Wrong trace "+ wrong
+        c = c+1
+        console.log(c)
+    }
+}
+
+
+</script>
+
+
+</script>
+
+</body>
+</html>
