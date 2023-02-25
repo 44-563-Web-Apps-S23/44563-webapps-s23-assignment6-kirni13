@@ -7,11 +7,11 @@
 <h1>Painter entry Soujanya Kirni</h1>
 
 <form>
-    <label for="form1_hidden">The hidden painter name</label>
-    <input type="password" id="form1_hidden" name="form1_hidden" min=10 max=50 step=2 value="Monet">
+    <label for="painter_label">The hidden painter name</label>
+    <input type="password" id="painter" name="painter" min=10 max=50 step=2 value="Monet">
     <br><br>
-    <label for="form1_painter">Guess the painter</label>
-    <input type="text" id="form1_painter" name="form1_painter" autofocus>
+    <label for="painter_guess_label">Guess the painter</label>
+    <input type="text" id="painter_guess" name="painter_guess" autofocus>
     <br><br>
     <input type="button" onclick="checkPainter()" value="Check the guess">
 </form>
@@ -21,8 +21,8 @@
     var oops = 0;
     function checkPainter() {
         console.log("Getting form values")
-        hidden = document.getElementById("form1_hidden").value;
-        guess = document.getElementById("form1_painter").value;
+        hidden = document.getElementById("painter").value;
+        guess = document.getElementById("painter_guess").value;
         out = document.getElementById("result")
         if (hidden == guess) {
             good = good + 1;
